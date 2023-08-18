@@ -8,10 +8,9 @@ from aiogram.dispatcher.filters import Command
 from filters import IsAdmin
 from handlers.ban import register_ban
 from handlers.unban import register_unban
-from utils import parsers
+from utils import config as cfg
 
-config = parsers.config()
-print(config)
+config = cfg.config()
 bot = Bot(token=config["token"], parse_mode=types.ParseMode.HTML)
 bot['config'] = config
 storage = MemoryStorage()
