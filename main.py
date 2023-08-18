@@ -11,7 +11,6 @@ from handlers.unban import register_unban
 from utils import parsers
 
 config = parsers.config()
-print(config)
 bot = Bot(token=config["token"], parse_mode=types.ParseMode.HTML)
 bot['config'] = config
 storage = MemoryStorage()
