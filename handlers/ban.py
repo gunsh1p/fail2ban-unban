@@ -1,9 +1,14 @@
 from aiogram import Dispatcher
 from aiogram.types import Message
 
+from utils.args import parse_args
 
 async def ban(message: Message):
-    await message.reply("Hello, admin! This command bans an ip or a range")
+    args = parse_args(message.get_args())
+    if len(args) == 0:
+        await message.reply("Hello, admin! This command bans an ip or a range")
+    else:
+        pass
 
 
 def register_ban(dp: Dispatcher):

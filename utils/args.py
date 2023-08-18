@@ -6,10 +6,6 @@ def parse_args(string: str) -> list:
     for char in string:
         if char == ' ' and not in_quotes:
             if current_arg:
-                if current_arg.isdigit():
-                    current_arg = int(current_arg)
-                elif current_arg.replace('.', '', 1).isdigit():
-                    current_arg = float(current_arg)
                 args.append(current_arg)
                 current_arg = ''
         elif char == '"':
@@ -18,10 +14,6 @@ def parse_args(string: str) -> list:
             current_arg += char
     
     if current_arg:
-        if current_arg.isdigit():
-            current_arg = int(current_arg)
-        elif current_arg.replace('.', '', 1).isdigit():
-            current_arg = float(current_arg)
         args.append(current_arg)
     
     return args
