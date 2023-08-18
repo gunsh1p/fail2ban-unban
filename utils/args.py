@@ -1,4 +1,4 @@
-def parse_args(string):
+def parse_args(string: str) -> list:
     args = []
     current_arg = ''
     in_quotes = False
