@@ -1,0 +1,12 @@
+[Unit]
+Description=It's a simple telegram bot which can unban (or ban xD) an ip on a server
+
+[Service]
+User=root
+WorkingDirectory=/home/root/fail2ban-unban
+ExecStart=/home/root/fail2ban-unban/env/bin/python main.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

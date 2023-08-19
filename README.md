@@ -7,6 +7,8 @@ It's a simple telegram bot that can ban or unban some ip on your server with fai
 ```bash
 git clone https://github.com/gunsh1p/fail2ban-unban.git
 cd fail2ban-unban
+python3 -m venv env
+./env/bin/pip install aiogram
 sudo cp ./fail2ban-unban.service /etc/systemd/system/fail2ban-unban.service
 ```
 
